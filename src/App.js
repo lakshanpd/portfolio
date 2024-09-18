@@ -13,15 +13,13 @@ function AnimatedRoutes() {
 
   return (
     <AnimatePresence mode="wait">
-      <div className="scale-110">
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/projects" element={<Work />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/projects" element={<Work />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </AnimatePresence>
   );
 }
