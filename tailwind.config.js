@@ -28,6 +28,9 @@ module.exports = {
           "100%": { opacity: "1" },
         },
       },
+      boxShadow: {
+        "3xl": "0 0px 30px -10px rgba(75, 75, 75, 0.3)",
+      },
     },
   },
   plugins: [],

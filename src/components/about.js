@@ -2,6 +2,7 @@ import { FaGithub } from "react-icons/fa6";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { FaInstagram } from "react-icons/fa";
 import TextRevealTW from "./animated_text";
+import { motion } from "framer-motion";
 
 function About() {
   const toGithub = () => {
@@ -14,7 +15,13 @@ function About() {
     window.location.href = "www.linkedin.com/in/danuka-lakshan-b92b91247";
   };
   return (
-    <div className=" flex w-full h-full justify-center font-mono text-white">
+    <motion.div
+      className=" flex w-full h-full justify-center font-mono text-white"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+      transition={{ duration: 1 }}
+    >
       <div className="w-4/5 h-full flex">
         {/*Description*/}
         <div className="w-3/5 flex flex-col items-start justify-center ">
@@ -32,9 +39,11 @@ function About() {
           </p>
           <div className="h-10"></div>
           <div className="flex items-center">
-            <button class="bg-transparent hover:bg-green-500 text-green-500 font-semibold hover:text-black py-2 px-4 border border-green-500 hover:border-transparent rounded-full transition-colors duration-500 ease-in-out">
-              Download CV
-            </button>
+            <a href="/cv.pdf" download="Danuka_Lakshan_CV.pdf">
+              <button class="bg-transparent hover:bg-green-500 text-green-500 font-semibold hover:text-black py-2 px-4 border border-green-500 hover:border-transparent rounded-full transition-colors duration-500 ease-in-out">
+                Download CV
+              </button>
+            </a>
             <div className="w-12"></div>
             <div
               style={{ color: "green" }}
@@ -64,7 +73,7 @@ function About() {
         {/*My Picture*/}
         <div className="w-2/5 flex justify-center items-center ">
           <div
-            className="relative w-5/6 aspect-square rounded-full bg-transparent border-4 border-transparent 
+            className="relative w-5/6 aspect-square rounded-full bg-transparent border-2 border-dashed border-green-400 
                 shadow-glow"
           >
             <img
@@ -75,7 +84,7 @@ function About() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

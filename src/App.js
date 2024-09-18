@@ -1,16 +1,34 @@
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Home from "./pages/home";
+import Services from "./pages/services";
+import ServiceGrid from "./components/service_grid";
+import ResumeDetails from "./components/resume_details";
+import Resume from "./pages/resume";
 
-export default function App() {
+// Component to handle route transitions with animations
+function AnimatedRoutes() {
+  const location = useLocation(); // useLocation must be used inside BrowserRouter
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/home" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/resume" element={<Resume />} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
+// Main component to set up BrowserRouter and route animations
+function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/home" element={<Home />}></Route>
-      </Routes>
+      <AnimatedRoutes />
     </BrowserRouter>
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+export default App; // Ensure App is exported as default
