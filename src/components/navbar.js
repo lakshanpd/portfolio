@@ -6,12 +6,19 @@ function Navbar(props) {
   const navigate = useNavigate();
 
   const handleClick = (option) => {
-    navigate("/" + option.toLowerCase());
+    if (option === "Home") {
+      navigate("/");
+    } else {
+      navigate("/" + option.toLowerCase());
+    }
   };
 
   return (
     <div className="flex w-full h-20 text-white items-center font-mono fixed">
-      <div className="flex w-5/12 items-start pl-10 text-3xl font-bold">
+      <div
+        className="flex w-5/12 items-start pl-10 text-3xl font-bold hover:cursor-pointer"
+        onClick={() => handleClick("Home")}
+      >
         Danuka<span className="text-green-400">.</span>
       </div>
 

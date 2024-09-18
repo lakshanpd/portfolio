@@ -4,6 +4,8 @@ import { AnimatePresence } from "framer-motion";
 import Home from "./pages/home";
 import Services from "./pages/services";
 import Resume from "./pages/resume";
+import Work from "./pages/work";
+import Contact from "./pages/contact";
 
 // Component to handle route transitions with animations
 function AnimatedRoutes() {
@@ -15,6 +17,8 @@ function AnimatedRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </AnimatePresence>
   );
