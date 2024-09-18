@@ -13,7 +13,7 @@ function AnimatedRoutes() {
 
   return (
     <AnimatePresence mode="wait">
-      <div className="scale-125">
+      <div className="scale-110">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
