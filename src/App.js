@@ -3,8 +3,6 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Home from "./pages/home";
 import Services from "./pages/services";
-import ServiceGrid from "./components/service_grid";
-import ResumeDetails from "./components/resume_details";
 import Resume from "./pages/resume";
 
 // Component to handle route transitions with animations
