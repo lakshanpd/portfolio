@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 function Navbar(props) {
-  const navbar_options = ["Home", "Services", "Resume", "Work", "Contact"];
+  const navbar_options = ["Home", "Services", "Resume", "Projects", "Contact"];
 
   const navigate = useNavigate();
 

@@ -31,6 +31,11 @@ module.exports = {
       boxShadow: {
         "3xl": "0 0px 30px -10px rgba(75, 75, 75, 0.3)",
       },
+      scale: {
+        110: "1.1", // 10% zoom
+        125: "1.25", // 25% zoom
+        150: "1.5", // 50% zoom
+      },
     },
   },
   plugins: [],
