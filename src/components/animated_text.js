@@ -3,7 +3,7 @@ function TextRevealTW(props) {
 
   return (
     <>
-      <h1 className="overflow-hidden text-6xl font-bold leading-tight text-green-500">
+      <h1 className="overflow-hidden text-7xl font-bold leading-tight text-green-500">
         {text.match(/./gu)?.map((char, index) => (
           <span
             className="animate-text-reveal inline-block [animation-fill-mode:backwards]"

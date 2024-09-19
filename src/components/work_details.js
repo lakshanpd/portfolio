@@ -64,19 +64,19 @@ function WorkDetail() {
           <div className="text-5xl font-bold">
             {numeral(projects[count].id).format("00")}
           </div>
-          <div className="text-3xl font-bold">{projects[count].title}</div>
-          <div className="text-xs opacity-80">
+          <div className="text-4xl font-bold">{projects[count].title}</div>
+          <div className="text-sm opacity-80">
             {projects[count].description}
           </div>
-          <div className="text-sm text-green-400">
+          <div className="text-base text-green-400">
             {projects[count].technologies}
           </div>
           <div className="flex border-t-2 border-gray-800 p-1">
-            <div className="border-white rounded-full bg-gray-800 m-2 p-2 rotate-[-90deg] hover:cursor-pointer">
-              <HiArrowDownRight color="white" />
+            <div className="border-white rounded-full bg-gray-800 m-2 p-3 rotate-[-90deg] hover:cursor-pointer">
+              <HiArrowDownRight color="white" size={22} />
             </div>
-            <div className="border-white rounded-full bg-gray-800 p-2 hover:cursor-pointer m-2">
-              <FaGithub color="white" size={20} />
+            <div className="border-white rounded-full bg-gray-800 p-3 hover:cursor-pointer m-2">
+              <FaGithub color="white" size={24} />
             </div>
           </div>
         </div>
@@ -88,11 +88,17 @@ function WorkDetail() {
         />
       </div>
       <div className="ml-auto mr-0 text-white pt-3">
-        <button className="bg-green-400 p-2 mr-2" onClick={leftArrowClicked}>
-          <SlArrowLeft color="black" size={10} />
+        <button
+          className="bg-green-400 hover:bg-green-500 p-2 mr-2"
+          onClick={leftArrowClicked}
+        >
+          <SlArrowLeft color="black" size={12} />
         </button>
-        <button className="bg-green-400 p-2" onClick={rightArrowClicked}>
-          <SlArrowRight color="black" size={10} />
+        <button
+          className="bg-green-400 hover:bg-green-500 p-2"
+          onClick={rightArrowClicked}
+        >
+          <SlArrowRight color="black" size={12} />
         </button>
       </div>
     </motion.div>

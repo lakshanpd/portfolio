@@ -5,7 +5,7 @@ function Work() {
   return (
     <div className="w-screen h-screen bg-darkBlue">
       <Navbar option="Projects" />
-      <div className="h-40"></div>
+      <div className="h-48"></div>
       <WorkDetail />
     </div>
   );
