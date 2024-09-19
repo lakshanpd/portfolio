@@ -123,29 +123,76 @@ function ResumeDetails() {
                 Software Engineering.
               </div>
               <div className="grid grid-cols-4 gap-3 w-9/12">
-                <div className=" bg-gray-900 w-fit p-5 rounded-xl">
-                  <IoLogoReact color="white" size={70} />
+                <div class="has-tooltip">
+                  <span class="tooltip rounded shadow-lg p-1 bg-gray-100 text-black -mt-6">
+                    React JS
+                  </span>
+                  <div className=" bg-gray-900 w-fit p-5 rounded-xl">
+                    <IoLogoReact color="white" size={70} />
+                  </div>
                 </div>
-                <div className=" bg-gray-900 w-fit p-5 rounded-xl">
-                  <AiOutlinePython color="white" size={70} />
+
+                <div class="has-tooltip">
+                  <span class="tooltip rounded shadow-lg p-1 bg-gray-100 text-black -mt-6">
+                    Python
+                  </span>
+                  <div className=" bg-gray-900 w-fit p-5 rounded-xl">
+                    <AiOutlinePython color="white" size={70} />
+                  </div>
                 </div>
-                <div className=" bg-gray-900 w-fit p-5 rounded-xl">
-                  <DiJavascript1 color="white" size={70} />
+
+                <div class="has-tooltip">
+                  <span class="tooltip rounded shadow-lg p-1 bg-gray-100 text-black -mt-6">
+                    JavaScript
+                  </span>
+                  <div className=" bg-gray-900 w-fit p-5 rounded-xl">
+                    <DiJavascript1 color="white" size={70} />
+                  </div>
                 </div>
-                <div className=" bg-gray-900 w-fit p-5 rounded-xl">
-                  <SiTailwindcss color="white" size={70} />
+
+                <div class="has-tooltip">
+                  <span class="tooltip rounded shadow-lg p-1 bg-gray-100 text-black -mt-6">
+                    Tailwind
+                  </span>
+                  <div className=" bg-gray-900 w-fit p-5 rounded-xl">
+                    <SiTailwindcss color="white" size={70} />
+                  </div>
                 </div>
-                <div className=" bg-gray-900 w-fit p-5 rounded-xl">
-                  <BiLogoFlask color="white" size={70} />
+
+                <div class="has-tooltip">
+                  <span class="tooltip rounded shadow-lg p-1 bg-gray-100 text-black -mt-6">
+                    Flask
+                  </span>
+                  <div className=" bg-gray-900 w-fit p-5 rounded-xl">
+                    <BiLogoFlask color="white" size={70} />
+                  </div>
                 </div>
-                <div className=" bg-gray-900 w-fit p-5 rounded-xl">
-                  <FaNodeJs color="white" size={70} />
+
+                <div class="has-tooltip">
+                  <span class="tooltip rounded shadow-lg p-1 bg-gray-100 text-black -mt-6">
+                    Node JS
+                  </span>
+                  <div className=" bg-gray-900 w-fit p-5 rounded-xl">
+                    <FaNodeJs color="white" size={70} />
+                  </div>
                 </div>
-                <div className=" bg-gray-900 w-fit p-5 rounded-xl">
-                  <SiMysql color="white" size={70} />
+
+                <div class="has-tooltip">
+                  <span class="tooltip rounded shadow-lg p-1 bg-gray-100 text-black -mt-6">
+                    MySQL
+                  </span>
+                  <div className=" bg-gray-900 w-fit p-5 rounded-xl">
+                    <SiMysql color="white" size={70} />
+                  </div>
                 </div>
-                <div className=" bg-gray-900 w-fit p-5 rounded-xl">
-                  <SiTensorflow color="white" size={70} />
+
+                <div class="has-tooltip">
+                  <span class="tooltip rounded shadow-lg p-1 bg-gray-100 text-black -mt-6">
+                    Tensorflow
+                  </span>
+                  <div className=" bg-gray-900 w-fit p-5 rounded-xl">
+                    <SiTensorflow color="white" size={70} />
+                  </div>
                 </div>
               </div>
             </motion.div>

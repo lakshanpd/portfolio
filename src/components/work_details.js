@@ -13,29 +13,31 @@ function WorkDetail() {
   const projects = [
     {
       id: 1,
-      title: "Frontend Project",
+      title: "Data Science Project",
       description:
-        "I am happy to show my front end project. This is my first project. I worked with 2 others for successfully finished this",
-      technologies: "React JS, Tailwind CSS, github pages",
-      link: "/test.png",
+        "I am happy to show HealthBot+ web app for diagnosing skin diseases, specially skin cancers. I am working with another two developers to build this web application.",
+      technologies: "React JS, Tailwind CSS, Flask, Hugging Face",
+      website_link: "",
+      github_link: "https://github.com/Isara-Li/HealthBot_Plus",
       img: "/test3.jpg",
     },
     {
       id: 2,
       title: "Full Stack Project",
       description:
-        "This project is a collaborative effort to create an admin dashboard. I focused on implementing responsive layouts and dynamic data visualization.",
-      technologies: "React JS, MongoDB, Chart.js",
-      link: "/test2.png",
+        "This is a private resort website with facilities such as booking rooms, reviewing the resort and more.",
+      technologies: "React JS, CSS, Node JS",
+      website_link: "",
+      github_link: "https://github.com/lakshanpd/Pallawala-Resort",
       img: "/test2.png",
     },
     {
       id: 3,
-      title: "E-commerce Frontend",
-      description:
-        "This e-commerce frontend project allowed me to work on user interface design and integration with APIs for dynamic product listings and cart functionality.",
-      technologies: "Next JS, MongoDB, REST API, AWS",
-      link: "/test3.jpg",
+      title: "Portfolio Website",
+      description: "Yeah, You are in my own porfolio.",
+      technologies: "React JS, Tailwind, Vercel",
+      website_link: "https://www.danukalakshan.me/",
+      github_link: "https://github.com/lakshanpd/portfolio",
       img: "/test.png",
     },
   ];
@@ -58,7 +60,6 @@ function WorkDetail() {
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
       transition={{ duration: 1 }}
     >
-      {" "}
       <div className=" grid grid-cols-2 font-mono text-white">
         <div className="flex flex-col justify-between pt-2 pr-3">
           <div className="text-5xl font-bold">
@@ -72,12 +73,25 @@ function WorkDetail() {
             {projects[count].technologies}
           </div>
           <div className="flex border-t-2 border-gray-800 p-1">
-            <div className="border-white rounded-full bg-gray-800 m-2 p-3 rotate-[-90deg] hover:cursor-pointer">
-              <HiArrowDownRight color="white" size={22} />
-            </div>
-            <div className="border-white rounded-full bg-gray-800 p-3 hover:cursor-pointer m-2">
-              <FaGithub color="white" size={24} />
-            </div>
+            <a
+              href={projects[count].website_link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="border-white rounded-full bg-gray-800 m-2 p-3 rotate-[-90deg] hover:cursor-pointer">
+                <HiArrowDownRight color="white" size={22} />
+              </div>
+            </a>
+
+            <a
+              href={projects[count].github_link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="border-white rounded-full bg-gray-800 p-3 hover:cursor-pointer m-2">
+                <FaGithub color="white" size={24} />
+              </div>
+            </a>
           </div>
         </div>
         {/* add images with size 960*720 (same ratio is ok)*/}

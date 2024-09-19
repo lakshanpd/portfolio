@@ -5,7 +5,7 @@
 /build
 
 # misc
-.env
+# .env
 .DS_Store
 .log
 .vscode/

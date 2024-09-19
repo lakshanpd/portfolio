@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       colors: {
         darkBlue: "#131621",
+        "light-blue": "#ADD8E6",
+        cyan: "#00FFFF",
       },
       boxShadow: {
         glow: "0 0 10px rgba(0, 255, 0, 0.8)", // Customize the glow effect

@@ -39,7 +39,10 @@ function Navbar(props) {
               </div>
             );
           })}
-          <button className="bg-green-400 hover:bg-green-600 text-black py-2 px-4 rounded-full text-lg">
+          <button
+            className="bg-green-400 hover:bg-green-600 text-black py-2 px-4 rounded-full text-lg"
+            onClick={() => handleClick("Contact")}
+          >
             Hire me
           </button>
         </div>
