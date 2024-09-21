@@ -3,6 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        xs: "360px", // Define your custom xs breakpoint
+        "screen-1": "1160px",
+        "screen-2": "1240px",
+      },
       colors: {
         darkBlue: "#131621",
         "light-blue": "#ADD8E6",

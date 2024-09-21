@@ -1,7 +1,7 @@
 import { FaGithub } from "react-icons/fa6";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { FaInstagram } from "react-icons/fa";
-import TextRevealTW from "./animated_text";
+// import TextRevealTW from "./animated_text";
 import { motion } from "framer-motion";
 
 function About() {
@@ -16,31 +16,60 @@ function About() {
   };
   return (
     <motion.div
-      className=" flex w-full h-full justify-center font-mono text-white"
+      className=" flex justify-center font-mono text-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
       transition={{ duration: 1 }}
     >
-      <div className="w-4/5 h-full flex">
+      <div className="screen-2:w-4/5 flex screen-2:flex-row-reverse flex-col items-center ">
+        {/*My Picture*/}
+        <div className="screen-2:w-2/5 flex justify-center items-center ">
+          <div
+            className="relative screen-2:w-9/12 xs:w-6/12 w-3/5 aspect-square rounded-full bg-transparent border-2 border-dashed border-green-400 
+                shadow-glow "
+          >
+            <img
+              src="/me.png"
+              alt=""
+              className="w-full h-full object-cover rounded-full"
+            />
+          </div>
+        </div>
+        <div className="screen-2:h-0 h-10"></div>
         {/*Description*/}
-        <div className="w-3/5 flex flex-col items-start justify-center text-lg">
+        <div className="screen-2:w-3/5 flex flex-col screen-2:items-start screen-2:text-lg items-center">
           <h2>Computer Science Engineer</h2>
           <div className="h-2"></div>
-          <p className="text-7xl">Hello I'm</p>
+          <p className="screen-2:text-7xl text-5xl">Hello I'm</p>
 
-          <TextRevealTW text={"Danuka Lakshan"} />
+          {/* <TextRevealTW text={"Danuka Lakshan"} /> */}
+          <motion.p
+            className="screen-2:text-7xl text-5xl text-green-400 pt-4"
+            initial={{ opacity: 0 }} // Start off-screen and invisible
+            animate={{ opacity: 1 }} // Fade in and move to position
+            transition={{ duration: 1 }} // Animation duration
+          >
+            Danuka Lakshan
+          </motion.p>
 
           <div className="h-5"></div>
-          <p className="w-11/12 opacity-0  animate-text-reveal-2 text-lg">
+          {/* animate-text-reveal-2 */}
+          <motion.p
+            className="screen-2:w-11/12 w-8/12 lg:text-lg text-sm screen-2:text-start text-center"
+            initial={{ opacity: 0, y: 20 }} // Start off-screen and invisible
+            animate={{ opacity: 1, y: 0 }} // Fade in and move to position
+            transition={{ duration: 1, delay: 1 }} // Animation duration
+          >
             I excel at crafting elegant digital experiences and I am proficient
             in various programming languages and technologies. So, Let's work
             together.
-          </p>
+          </motion.p>
+
           <div className="h-10"></div>
           <div className="flex items-center">
             <a href="/cv.pdf" download="Danuka_Lakshan_CV.pdf">
-              <button class="bg-transparent hover:bg-green-500 text-green-500 text-lg font-semibold hover:text-black py-2 px-4 border border-green-500 hover:border-transparent rounded-full transition-colors duration-500 ease-in-out">
+              <button class="bg-transparent hover:bg-green-500 text-green-500 screen-2:text-lg font-semibold hover:text-black py-2 px-4 border border-green-500 hover:border-transparent rounded-full transition-colors duration-500 ease-in-out">
                 Download CV
               </button>
             </a>
@@ -68,19 +97,6 @@ function About() {
             >
               <FaInstagram size={36} />
             </div>
-          </div>
-        </div>
-        {/*My Picture*/}
-        <div className="w-2/5 flex justify-center items-center ">
-          <div
-            className="relative w-9/12 aspect-square rounded-full bg-transparent border-2 border-dashed border-green-400 
-                shadow-glow"
-          >
-            <img
-              src="/me.png"
-              alt=""
-              className="w-full h-full object-cover rounded-full"
-            />
           </div>
         </div>
       </div>
