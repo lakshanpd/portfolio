@@ -7,6 +7,7 @@ module.exports = {
         xs: "360px", // Define your custom xs breakpoint
         "screen-1": "1160px",
         "screen-2": "1240px",
+        "screen-3": "350px",
       },
       colors: {
         darkBlue: "#131621",

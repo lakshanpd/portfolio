@@ -3,11 +3,12 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 
 function Navbar(props) {
   const navbar_options = ["Home", "Services", "Resume", "Projects", "Contact"];
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
-  // const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const navigate = useNavigate();
 
@@ -19,61 +20,66 @@ function Navbar(props) {
     }
   };
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setScreenWidth(window.innerWidth);
-  //   };
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
 
-  //   window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
 
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="flex w-full min-h-20 text-white items-center font-mono fixed z-50">
       <div
-        className="flex w-5/12 items-start pl-12 text-4xl font-bold hover:cursor-pointer"
+        className="flex w-5/12 items-start sm:pl-12 screen-3:pl-4 text-4xl font-bold hover:cursor-pointer"
         onClick={() => handleClick("Home")}
       >
         Danuka<span className="text-green-400">.</span>
       </div>
 
-      <div className="flex items-start w-7/12 h-full screen-2:visible invisible">
-        <div className="flex justify-around items-center  h-full w-11/12">
-          {navbar_options.map((option) => {
-            return (
-              <div
-                key={option}
-                className={`hover:text-green-400 hover:cursor-pointer  transition-all duration-400 ${
-                  props.option === option
-                    ? "text-green-400 screen-2:text-2xl text-xl"
-                    : "text-white screen-2:text-xl"
-                }`}
-                onClick={() => handleClick(option)}
-              >
-                {option}
-              </div>
-            );
-          })}
-          <button
-            className="bg-green-400 hover:bg-green-600 text-black py-2 px-4 rounded-full text-lg"
-            onClick={() => handleClick("Contact")}
-          >
-            Hire me
-          </button>
-        </div>
+      <div className="flex items-start w-7/12 h-full">
+        {screenWidth > 800 && (
+          <div className="flex justify-around items-center  h-full w-11/12">
+            {navbar_options.map((option) => {
+              return (
+                <div
+                  key={option}
+                  className={`hover:text-green-400 hover:cursor-pointer  transition-all duration-400 ${
+                    props.option === option
+                      ? "text-green-400 screen-2:text-2xl text-xl"
+                      : "text-white screen-2:text-xl"
+                  }`}
+                  onClick={() => handleClick(option)}
+                >
+                  {option}
+                </div>
+              );
+            })}
+            <button
+              className="bg-green-400 hover:bg-green-600 text-black py-2 px-4 rounded-full text-lg"
+              onClick={() => handleClick("Contact")}
+            >
+              Hire me
+            </button>
+          </div>
+        )}
       </div>
 
-      {!hamburgerClicked ? (
+      {/* {!hamburgerClicked ? (
+
+      ) : null} */}
+      {screenWidth < 800 && (
         <div
-          className="screen-2:invisible lg:pr-6 pr-3 hover:cursor-pointer hover:text-green-400 transition duration-300"
+          className="screen-2:invisible lg:pr-6 screen-3:pr-4 hover:cursor-pointer hover:text-green-400 transition duration-300"
           onClick={() => setHamburgerClicked(true)}
         >
           <RxHamburgerMenu size={40} />
         </div>
-      ) : null}
+      )}
       <AnimatePresence>
         {hamburgerClicked && (
           <>
@@ -90,7 +96,7 @@ function Navbar(props) {
             >
               <button
                 onClick={() => setHamburgerClicked(false)} // Close the sidebar
-                className="text-white p-6"
+                className="text-white p-6 "
               >
                 <IoMdClose
                   size={30}

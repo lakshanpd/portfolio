@@ -39,16 +39,16 @@ function About() {
         <div className="screen-2:h-0 h-10"></div>
         {/*Description*/}
         <div className="screen-2:w-3/5 flex flex-col screen-2:items-start screen-2:text-lg items-center">
-          <h2>Computer Science Engineer</h2>
+          <h2 className="text-sm">Computer Science Engineer</h2>
           <div className="h-2"></div>
-          <p className="screen-2:text-7xl text-5xl">Hello I'm</p>
+          <p className="screen-2:text-7xl text-4xl">Hello I'm</p>
 
           {/* <TextRevealTW text={"Danuka Lakshan"} /> */}
           <motion.p
-            className="screen-2:text-7xl text-5xl text-green-400 pt-4"
+            className="screen-2:text-7xl text-4xl text-green-400 pt-3"
             initial={{ opacity: 0 }} // Start off-screen and invisible
             animate={{ opacity: 1 }} // Fade in and move to position
-            transition={{ duration: 1 }} // Animation duration
+            transition={{ duration: 1, delay: 0.5 }} // Animation duration
           >
             Danuka Lakshan
           </motion.p>
@@ -59,7 +59,7 @@ function About() {
             className="screen-2:w-11/12 w-8/12 lg:text-lg text-sm screen-2:text-start text-center"
             initial={{ opacity: 0, y: 20 }} // Start off-screen and invisible
             animate={{ opacity: 1, y: 0 }} // Fade in and move to position
-            transition={{ duration: 1, delay: 1 }} // Animation duration
+            transition={{ duration: 1, delay: 1.5 }} // Animation duration
           >
             I excel at crafting elegant digital experiences and I am proficient
             in various programming languages and technologies. So, Let's work
