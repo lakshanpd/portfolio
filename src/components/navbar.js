@@ -33,7 +33,7 @@ function Navbar(props) {
   }, []);
 
   return (
-    <div className="flex w-full min-h-20 text-white items-center font-mono fixed z-50">
+    <div className="flex w-full min-h-20 text-white items-center font-mono fixed z-50 bg-darkBlue">
       <div
         className="flex w-5/12 items-start sm:pl-12 screen-3:pl-4 text-4xl font-bold hover:cursor-pointer"
         onClick={() => handleClick("Home")}

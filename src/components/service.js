@@ -26,9 +26,11 @@ function Service(props) {
       //   exit={{ y: "-100%" }}
     >
       <div className="flex justify-between">
-        <div className="text-4xl font-bold">{props.number}</div>
+        <div className="sm:text-4xl xs:text-3xl screen-3:text-2xl font-bold">
+          {props.number}
+        </div>
         <div
-          className={`flex  items-center p-3 rounded-full  ${
+          className={`flex  items-center xs:p-3 p-2 rounded-full  ${
             isHovered ? " bg-green-400" : "bg-white"
           } hover:rotate-[-45deg] transition duration-500`}
         >
@@ -37,9 +39,13 @@ function Service(props) {
       </div>
 
       <div className="h-1"></div>
-      <div className="font-bold text-3xl">{props.skill}</div>
+      <div className="font-bold sm:text-3xl xs:text-2xl screen-3:text-xl">
+        {props.skill}
+      </div>
       <div className="h-2"></div>
-      <div className="text-sm text-white opacity-70">{props.description}</div>
+      <div className="xs:text-sm screen-3:text-xs text-white opacity-70">
+        {props.description}
+      </div>
     </motion.div>
   );
 }

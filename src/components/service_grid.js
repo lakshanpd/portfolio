@@ -9,7 +9,7 @@ function ServiceGrid() {
       // transition={{ duration: 0.5 }}
       // exit={{ x: "-100%" }}
     >
-      <div className="grid grid-cols-2 gap-x-20 gap-y-10">
+      <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-x-20 gap-y-10">
         <Service
           number="01"
           skill="Web Development"
