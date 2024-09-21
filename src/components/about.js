@@ -39,7 +39,9 @@ function About() {
         <div className="screen-2:h-0 h-10"></div>
         {/*Description*/}
         <div className="screen-2:w-3/5 flex flex-col screen-2:items-start screen-2:text-lg items-center">
-          <h2 className="text-sm">Computer Science Engineer</h2>
+          <h2 className="screen-2:text-lg text-sm">
+            Computer Science Engineer
+          </h2>
           <div className="h-2"></div>
           <p className="screen-2:text-7xl text-4xl">Hello I'm</p>
 

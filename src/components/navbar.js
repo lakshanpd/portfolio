@@ -43,7 +43,7 @@ function Navbar(props) {
 
       <div className="flex items-start w-7/12 h-full">
         {screenWidth > 800 && (
-          <div className="flex justify-around items-center  h-full w-11/12">
+          <div className="flex justify-around items-center h-full w-11/12 p-0">
             {navbar_options.map((option) => {
               return (
                 <div
