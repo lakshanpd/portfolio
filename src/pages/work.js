@@ -3,10 +3,11 @@ import Navbar from "../components/navbar";
 
 function Work() {
   return (
-    <div className="w-screen h-screen bg-darkBlue">
+    <div className="w-screen min-h-screen bg-darkBlue">
       <Navbar option="Projects" />
-      <div className="h-48"></div>
+      <div className="md:h-48 h-32"></div>
       <WorkDetail />
+      <div className="md:h-0 screen-3:h-10"></div>
     </div>
   );
 }

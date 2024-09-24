@@ -9,10 +9,11 @@ function About() {
     window.location.href = "https://github.com/lakshanpd";
   };
   const toInstagram = () => {
-    window.location.href = "https://www.example.com";
+    window.location.href = "https://www.instagram.com/";
   };
   const toLinkedin = () => {
-    window.location.href = "www.linkedin.com/in/danuka-lakshan-b92b91247";
+    window.location.href =
+      "https://www.linkedin.com/in/danuka-lakshan-b92b91247/";
   };
   return (
     <motion.div

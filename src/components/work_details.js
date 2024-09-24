@@ -54,13 +54,13 @@ function WorkDetail() {
 
   return (
     <motion.div
-      className="w-8/12 ml-auto mr-auto bg-darkBlue flex flex-col"
+      className="xl:w-8/12 lg:w-9/12 md:w-10/12 screen-3:w-8/12 ml-auto mr-auto bg-darkBlue flex flex-col"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
       transition={{ duration: 1 }}
     >
-      <div className=" grid grid-cols-2 font-mono text-white">
+      <div className=" grid md:grid-cols-2 grid-cols-1 font-mono text-white">
         <div className="flex flex-col justify-between pt-2 pr-3">
           <div className="text-5xl font-bold">
             {numeral(projects[count].id).format("00")}
