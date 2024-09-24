@@ -7,6 +7,7 @@ function Home() {
       <Navbar option="Home" />
       <div className="xs:p-16 lg:p-20 screen-2:p-24"></div>
       <About />
+      <div className="sm:h-0 screen-3:h-10"></div>
     </div>
   );
 }

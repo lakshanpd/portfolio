@@ -7,6 +7,7 @@ function Contact() {
       <Navbar option="Contact" />
       <div className="h-40"></div>
       <ContactDetails />
+      <div className="sm:h-0 screen-3:h-20"></div>
     </div>
   );
 }

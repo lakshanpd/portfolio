@@ -112,13 +112,13 @@ function Navbar(props) {
                   <a href="./services">Services</a>
                 </li>
                 <li className="flex w-full justify-center text-white py-5 hover:bg-green-400 hover:cursor-pointer hover:text-black hover:font-bold transition duration-300 ease-in-out">
-                  <a href="/home">Resume</a>
+                  <a href="/resume">Resume</a>
                 </li>
                 <li className="flex w-full justify-center text-white py-5 hover:bg-green-400 hover:cursor-pointer hover:text-black hover:font-bold transition duration-300 ease-in-out">
-                  <a href="/home">Projects</a>
+                  <a href="/projects">Projects</a>
                 </li>
                 <li className="flex w-full justify-center text-white py-5 hover:bg-green-400 hover:cursor-pointer hover:text-black hover:font-bold transition duration-300 ease-in-out">
-                  <a href="/home">Contact</a>
+                  <a href="/contact">Contact</a>
                 </li>
               </ul>
             </motion.div>
