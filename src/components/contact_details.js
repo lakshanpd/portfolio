@@ -44,13 +44,13 @@ function ContactDetails() {
 
   return (
     <motion.div
-      className="flex w-8/12 font-mono mr-auto ml-auto"
+      className="flex md:w-8/12 w-11/12 font-mono mr-auto ml-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.2 } }}
       transition={{ duration: 1 }}
     >
-      <div className="w-full grid grid-cols-2">
+      <div className="w-full grid lg:grid-cols-2 grid-cols-1">
         <div className="text-white bg-gray-800 flex flex-col gap-5 p-5 rounded-sm">
           <div className="text-3xl text-green-400 font-bold">
             Let's work together
@@ -64,7 +64,7 @@ function ContactDetails() {
               className="flex flex-col gap-6"
               onSubmit={handleOnSubmit}
             >
-              <div className="grid grid-cols-2 gap-x-4 gap-y-6">
+              <div className="grid md:grid-cols-2 grid-cols-1 gap-x-4 md:gap-y-6 gap-5">
                 <input
                   autoComplete="off"
                   type="text"
@@ -141,13 +141,14 @@ function ContactDetails() {
             </form>
           </div>
         </div>
-        <div className="text-white bg-darkBlue flex justify-center items-center">
+
+        <div className="text-white bg-darkBlue flex justify-center items-center lg:pt-0 pt-10 md:text-base text-sm">
           <div className="w-4/5 flex flex-col gap-5">
             <div className="flex items-center">
               <IoIosCall style={{ color: "lightgreen" }} size={30} />
               <div className="pl-4 flex flex-col">
                 <p className="text-xs opacity-70">Phone</p>
-                <p className="opacity-90">(+94) 77 37 50 264</p>
+                <p className="opacity-90 ">(+94) 77 37 50 264</p>
               </div>
             </div>
             <div className="flex items-center">
