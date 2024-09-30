@@ -235,7 +235,7 @@ function ResumeDetails() {
                   </div>
                 </div>
 
-                <div className="flex flex-col  gap-5 ">
+                <div className="flex flex-col  gap-5 sm:mt-0 screen-3:mt-5 ">
                   {" "}
                   <div>
                     <span className="text-sm opacity-60 block">Phone: </span>{" "}

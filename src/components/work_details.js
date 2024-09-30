@@ -19,7 +19,7 @@ function WorkDetail() {
       technologies: "React JS, Tailwind CSS, Flask, Hugging Face",
       website_link: "",
       github_link: "https://github.com/Isara-Li/HealthBot_Plus",
-      img: "/test3.jpg",
+      img: "/skin_vision.PNG",
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ function WorkDetail() {
       technologies: "React JS, CSS, Node JS",
       website_link: "",
       github_link: "https://github.com/lakshanpd/Pallawala-Resort",
-      img: "/test2.png",
+      img: "/pallawala_resort.PNG",
     },
     {
       id: 3,
@@ -38,7 +38,7 @@ function WorkDetail() {
       technologies: "React JS, Tailwind, Vercel",
       website_link: "https://www.danukalakshan.me/",
       github_link: "https://github.com/lakshanpd/portfolio",
-      img: "/test.png",
+      img: "/portfolio.PNG",
     },
   ];
 
@@ -65,11 +65,11 @@ function WorkDetail() {
           <div className="text-5xl font-bold">
             {numeral(projects[count].id).format("00")}
           </div>
-          <div className="text-4xl font-bold">{projects[count].title}</div>
-          <div className="text-sm opacity-80">
+          <div className="text-4xl mt-5 font-bold">{projects[count].title}</div>
+          <div className="text-sm opacity-80 mt-5">
             {projects[count].description}
           </div>
-          <div className="text-base text-green-400">
+          <div className="text-base text-green-400 mt-5">
             {projects[count].technologies}
           </div>
           <div className="flex border-t-2 border-gray-800 p-1">
