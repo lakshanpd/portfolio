@@ -28,12 +28,12 @@ function ServiceGrid() {
           description="Proficient in designing and implementing machine learning models to solve complex problems and analyze data."
           delay={0.3}
         />
-        <Service
+        {/* <Service
           number="04"
           skill="Mobile App Development"
           description="Experienced in developing robust mobile apps for Android and iOS, focusing on performance and usability."
           delay={0.4}
-        />
+        /> */}
       </div>
     </motion.div>
   );
